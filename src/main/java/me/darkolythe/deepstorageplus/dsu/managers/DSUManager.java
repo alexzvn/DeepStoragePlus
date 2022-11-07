@@ -52,7 +52,7 @@ public class DSUManager {
         if (IOItem == null
                 || !IOItem.hasItemMeta()
                 || !IOItem.getItemMeta().hasDisplayName()
-                || !IOItem.getItemMeta().getDisplayName().equals(ChatColor.WHITE + LanguageManager.getValue("dsuioconfig"))) {
+                || !IOItem.getItemMeta().getDisplayName().equals(ChatColor.WHITE + LanguageManager.getValue("dsuiobtnconfig"))) {
             inv.setItem(53, createIOItem(player));
         }
     }
@@ -60,7 +60,7 @@ public class DSUManager {
     public static ItemStack createIOItem(Player player) {
         ItemStack settings = new ItemStack(Material.REDSTONE);
         ItemMeta settingsmeta = settings.getItemMeta();
-        settingsmeta.setDisplayName(ChatColor.WHITE + ChatColor.stripColor(LanguageManager.getValue("dsuioconfig")));
+        settingsmeta.setDisplayName(ChatColor.WHITE + ChatColor.stripColor(LanguageManager.getValue("dsuiobtnconfig")));
         settingsmeta.setLore(Arrays.asList(ChatColor.GRAY + LanguageManager.getValue("input") + ": " + ChatColor.BLUE + LanguageManager.getValue("all"),
                 ChatColor.GRAY + LanguageManager.getValue("output") + ": " + ChatColor.BLUE + LanguageManager.getValue("none"),
                 ChatColor.GRAY + LanguageManager.getValue("sortingby") + ": " + ChatColor.BLUE + LanguageManager.getValue("container"),

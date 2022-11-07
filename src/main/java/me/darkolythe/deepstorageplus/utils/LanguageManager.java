@@ -14,6 +14,7 @@ public class LanguageManager {
         translateMap.put("downloadhere", main.getConfig().getString("downloadhere"));
         translateMap.put("containersfull", main.getConfig().getString("containersfull"));
         translateMap.put("dsuioconfig", main.getConfig().getString("dsuioconfig"));
+        translateMap.put("dsuiobtnconfig", main.getConfig().getString("dsuiobtnconfig"));
         translateMap.put("input", main.getConfig().getString("input"));
         translateMap.put("all", main.getConfig().getString("all"));
         translateMap.put("output", main.getConfig().getString("output"));

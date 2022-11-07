@@ -104,7 +104,7 @@ public class InventoryListener implements Listener {
                                 event.setCancelled(true);
                                 if (cursor == null || cursor.getType() == Material.AIR) {
                                     if (item != null && item.hasItemMeta()) {
-                                        if (item.getItemMeta().getDisplayName().contains(LanguageManager.getValue("dsuioconfig"))) { //BOTTOM RIGHT FOR SETTINGS
+                                        if (item.getItemMeta().getDisplayName().contains(LanguageManager.getValue("dsuiobtnconfig"))) { //BOTTOM RIGHT FOR SETTINGS
                                             player.openInventory(createIOInventory(inv));
                                             player.updateInventory();
                                         }
@@ -195,7 +195,7 @@ public class InventoryListener implements Listener {
                         }
                     }
 
-                } else if (event.getView().getTitle().equals(ChatColor.BLUE.toString() + ChatColor.BOLD.toString() + LanguageManager.getValue("dsuioconfig"))) {
+                } else if (event.getView().getTitle().equals(ChatColor.WHITE.toString() + ChatColor.BOLD.toString() + LanguageManager.getValue("dsuioconfig"))) {
                     event.setCancelled(true);
                     if (event.getSlot() == 8 || event.getSlot() == 17) {
                         startSelection(event.getSlot(), inv);
@@ -285,7 +285,7 @@ public class InventoryListener implements Listener {
     private void onInventoryClose(InventoryCloseEvent event) {
         if (event.getPlayer() instanceof Player) {
             Player player = (Player) event.getPlayer();
-            if (event.getView().getTitle().equals(ChatColor.BLUE.toString() + ChatColor.BOLD.toString() + LanguageManager.getValue("dsuioconfig"))) {
+            if (event.getView().getTitle().equals(ChatColor.WHITE.toString() + ChatColor.BOLD.toString() + LanguageManager.getValue("dsuioconfig"))) {
                 Container DSUContainer = DeepStoragePlus.openDSU.get(player.getUniqueId());
                 Inventory DSU = DSUContainer.getInventory();
 
